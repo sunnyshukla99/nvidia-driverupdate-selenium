@@ -1,17 +1,20 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service as ChromiumService
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
+#from selenium.webdriver.chrome.service import Service as ChromiumService
+#from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.wait import WebDriverWait # will implement in future
+from selenium.webdriver.support.wait import WebDriverWait
 import time
-import os
+from selenium
+#import os
 
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
-driver = webdriver.Chrome(options=chrome_options, service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+
+driver = webdriver.Chrome()
+#driver = webdriver.Chrome(options=chrome_options, service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 driver.get("https://www.nvidia.com/Download/index.aspx?")
 driver.implicitly_wait(10)
 
@@ -53,7 +56,7 @@ drop.select_by_value("1")
 
 #click search button
 
-searchButton = driver.find_element(By.ID, "imgSearch")
+searchButton = driver.find_element(By.XPATH, ".//a[contains(@href, 'GetDriver')]")
 searchButton.click()
 
 time.sleep(5)
