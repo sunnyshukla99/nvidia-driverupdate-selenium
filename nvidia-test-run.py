@@ -9,6 +9,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 import time
 #import os
 
+
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 
