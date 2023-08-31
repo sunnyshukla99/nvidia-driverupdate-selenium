@@ -7,7 +7,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 import time
-from selenium
 #import os
 
 chrome_options = Options()
