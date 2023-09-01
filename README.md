@@ -6,6 +6,7 @@ The tool uses a python script with selenium automation to ask for user's NVIDIA 
 
 Old version: 1.0, only downloads drivers for a MX230 driver, without checking for a version.
 
+
 Updated to version 1.5 (current): Tool now asks for user input in a terminal, once user inputs the value corresponding to the GPU they have, it should download the desired driver correctly.
 
 **BUGS**
